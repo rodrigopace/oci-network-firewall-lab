@@ -46,37 +46,10 @@ Learn more about OCI Network Firewalls on Oracle Live Labs ==>  [Livelabs Worksh
 
 You can deploy this architecture using two approaches explained in each section: 
 
-1. Using Oracle Resource Manager 
-2. Using Terraform CLI 
-3. Using the step-by-step tutorial
+1. Using Terraform CLI 
+2. Using the step-by-step tutorial
 
-## Deploy Using Oracle Resource Manager
-
-In this section you will follow each steps given below to create this architecture:
-
-1. **Click** [![Deploy to Oracle Cloud](https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg)](https://console.us-phoenix-1.oraclecloud.com/resourcemanager/stacks/create?region=home&zipUrl=https://github.com/oracle-quickstart/oci-network-firewall/raw/master/oci-network-firewall-reference-architecture/resource-manager/oci-network-firewall.zip)
-
-    > If you aren't already signed in, when prompted, enter the tenancy and user credentials.
-
-2. Review and accept the terms and conditions.
-
-3. Select the region where you want to deploy the stack.
-
-4. Follow the on-screen prompts and instructions to create the stack.
-
-5. After creating the stack, click **Terraform Actions**, and select **Plan** from the stack on OCI console UI.
-
-6. Wait for the job to be completed and review the plan.
-
-    > To make any changes, return to the Stack Details page, click **Edit Stack**, and make the required changes. Then, run the **Plan** action again.
-
-7. If no further changes are necessary, return to the Stack Details page, click **Terraform Actions**, and select **Apply**. 
-
-8. At this stage your architecture should have been deployed successfully. You can proceed to next section for configuring your OCI Network Firewall.
-
-9. If you no longer require your infrastructure, return to the Stack Details page and **Terraform Actions**, and select **Destroy**.
-
-## Deploy Using the Terraform CLI
+## 1 - Deploy Using the Terraform CLI
 
 In this section you will use **Terraform** locally to create this architecture: 
 
@@ -137,6 +110,10 @@ In this section you will use **Terraform** locally to create this architecture:
     ```bash
     terraform destroy
     ```
+
+## 2 - Using the step-by-step Tutorial
+
+You can follow a step-by-step to build this lab in your OCI Console. To access and follow the steps, please click [here]().
 
 ## Configuration
 
