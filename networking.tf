@@ -119,19 +119,20 @@ resource "oci_core_route_table" "RT_to_nfw" {
      }
 }
 
-
- resource "oci_core_route_table_attachment" "subnet_lb_route_table_attachment" {
+# Attaching route table to subnets
+resource "oci_core_route_table_attachment" "subnet_lb_route_table_attachment" {
    #Required    
    subnet_id      = oci_core_subnet.subnet_lb.id
    route_table_id = oci_core_route_table.RT_LB.id
- }
+}
 
- resource "oci_core_route_table_attachment" "subnet_nfw_route_table_attachment" {
+resource "oci_core_route_table_attachment" "subnet_nfw_route_table_attachment" {
    #Required    
    subnet_id      = oci_core_subnet.subnet_nfw.id
    route_table_id = oci_core_route_table.RT_NFW.id
- }
+}
 
+# Creating Security Lists
 resource "oci_core_security_list" "security_list_allow_http" {
     #Required
     compartment_id = var.compartment_id
@@ -243,8 +244,6 @@ resource "oci_core_subnet" "subnet_private_app2" {
     security_list_ids          = [oci_core_security_list.security_list_allow_http_private.id]
     prohibit_public_ip_on_vnic = true
 }
-#####
-
 
 # Creating Service Gateway for Private Subnet
 data "oci_core_services" "service-gateway-services" {

@@ -5,7 +5,7 @@
 #
 # LB 01 - App1
 #
-#     Region: sa-saopaulo-1 (GRU)
+#     Region: Define your region in terraform.tfvars file
 #     VCN: vcn_public
 #     Subnet: subnet_loadbalancer
 #
@@ -75,7 +75,7 @@ resource "oci_load_balancer_backend" "srv2_app1_backend" {
 #
 # LB 02 - App2
 #
-#     Region: sa-saopaulo-1 (GRU)
+#     Region: Define your region in terraform.tfvars file
 #     VCN: vcn_public
 #     Subnet: subnet_loadbalancer
 #

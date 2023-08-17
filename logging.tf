@@ -28,8 +28,10 @@ resource "oci_logging_log" "nfw_inbound_trafficLog" {
   retention_duration = "30"
 }
 
+#
 # Creating Loab Balancer Logging for App1
 #
+
 # Error Log
 resource oci_logging_log lb_app1_error_log {
   configuration {
@@ -68,8 +70,10 @@ resource oci_logging_log lb_app1_access_log {
   retention_duration = "30"
 }
 
+#
 # Creating Loab Balancer Logging for App2
 #
+
 # Error Log
 resource oci_logging_log lb_app2_error_log {
   configuration {
@@ -108,8 +112,10 @@ resource oci_logging_log lb_app2_access_log {
   retention_duration = "30"
 }
 
+#
 # Creating VCN Flow Logs for subnet_nfw
 #
+
 # subnet_nfw Logs
 resource oci_logging_log subnet_nfw_logs {
   configuration {

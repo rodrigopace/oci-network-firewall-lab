@@ -1,8 +1,8 @@
 ##################################################
 # Network Firewall                               #
 ##################################################
-   
 
+# Creating OCI Network Firewall
 resource "oci_network_firewall_network_firewall" "lab_network_firewall" {
     compartment_id             = var.compartment_id
     network_firewall_policy_id = oci_network_firewall_network_firewall_policy.allow_all_http_policy.id
@@ -10,6 +10,7 @@ resource "oci_network_firewall_network_firewall" "lab_network_firewall" {
     display_name               = var.network_firewall_name
 }
 
+# Data to get OCI Networi Firewall IP informations
 data "oci_core_private_ips" "nfw_private_ip" {
   subnet_id  = oci_core_subnet.subnet_nfw.id
 

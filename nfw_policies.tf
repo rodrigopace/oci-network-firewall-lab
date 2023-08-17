@@ -2,6 +2,7 @@
 # Network Firewall Policies                      #
 ##################################################
 
+# Creating OCI Network Firewall Policy
 resource "oci_network_firewall_network_firewall_policy" "allow_all_http_policy" {
     #Required
     compartment_id = var.compartment_id

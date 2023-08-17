@@ -5,8 +5,8 @@
 # 
 # Instance 01 - App1
 #
-#     Region: sa-saopaulo-1 (GRU)
-#     Image: Oracle Linux 9.x
+#     Region: Define your region in terraform.tfvars file
+#     Image: Oracle Linux 9.x (you can change the image OCID in terraform.tfvars file)
 #     VCN: vcn_private
 #     Subnet: subnet_app01
 #
@@ -99,8 +99,8 @@ resource "oci_core_instance" "srv2_app1" {
 # 
 # Instance 01 - App2
 #
-#     Region: sa-saopaulo-1 (GRU)
-#     Image: Oracle Linux 9.x
+#     Region: Define your region in terraform.tfvars file
+#     Image: Oracle Linux 9.x (you can change the image OCID in terraform.tfvars file)
 #     VCN: vcn_private
 #     Subnet: subnet_app01
 #
