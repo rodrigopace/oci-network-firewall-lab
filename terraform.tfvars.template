@@ -5,7 +5,6 @@ user_private_key_path  = "~/.oci/oci_api_key.pem"
 oci_region             = "us-phoenix-1"
 compartment_id         = "ocid1.compartment.oc1..."
 drg_name	       = "DRG_LAB_NFW"
-create_service_gateway = false
 
 # Compute variables
 # Image: Oracle Linux 9.2-2023.07.31-0 - Region: sa-saopaulo-1 (GRU)
