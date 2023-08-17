@@ -1,0 +1,43 @@
+#!/bin/bash
+echo "############################################" > /etc/motd
+echo "# THIS MACHINE WAS CREATED USING TERRAFORM #" >> /etc/motd
+echo "#                                          #" >> /etc/motd
+echo "#       OCI NETWORK FIREWALL LAB           #" >> /etc/motd
+echo "############################################" >> /etc/motd
+
+# Installing nginx on Oracle Linux
+sudo yum install httpd -y
+
+# Starting httpd
+sudo systemctl start httpd
+
+#####################################################
+#        Disabling Oracle Linux FirewallD           #
+#####################################################
+# PLEASE DO NOT DO THIS IN A PRODUCTION ENVIRONMENT #
+#####################################################
+sudo systemctl stop firewalld
+sudo systemctl disable firewalld
+#####################################################
+# PLEASE DO NOT DO THIS IN A PRODUCTION ENVIRONMENT #
+#####################################################
+
+# Configuring a simple webpage to our server
+sudo touch /var/www/html/index.html
+sudo chown apache:apache /var/www/html/index.html
+
+export HOSTNAME=`hostname`
+
+sudo cat <<EOF > /var/www/html/index.html
+<html>
+        <center><img src="https://estuary.dev/static/638f52fd4afa2f02e6d522065f7268f4/26ce8/thumbnail_Group_22548_cda168ff12.png"></img></center>
+	<center>
+		<h1>Welcome to the OCI Network Firewall Lab webpage!</h1>
+		<h2>CONGRATULATIONS!</h2><P>
+		<h3>if you are seeing this page it's because your OCI Network Firewall lab worked! <p>Please, refresh your browser and see the server hostname changing below (because of the Round-Robin policy placed at the OCI LoadBalancers).</h3>
+	</center>
+        <br>
+	<center><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Eo_circle_green_arrow-down.svg/2048px-Eo_circle_green_arrow-down.svg.png" width="100" height="100"></center>
+        <h1><center>This is server $HOSTNAME!</center></h1>
+</html>
+EOF

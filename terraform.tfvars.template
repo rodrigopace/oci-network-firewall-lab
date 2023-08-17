@@ -1,0 +1,14 @@
+tenancy_ocid           = "ocid1.tenancy.oc1..."
+user_ocid              = "ocid1.user.oc1..."
+fingerprint            = "a5:5..."
+user_private_key_path  = "~/.oci/oci_api_key.pem"
+oci_region             = "us-phoenix-1"
+compartment_id         = "ocid1.compartment.oc1..."
+drg_name	       = "DRG_LAB_NFW"
+create_service_gateway = false
+
+# Compute variables
+# Image: Oracle Linux 9.2-2023.07.31-0 - Region: sa-saopaulo-1 (GRU)
+image_source_ocid      = "ocid1.image.oc1.sa-saopaulo-1.aaaaaaaattxvhwvk32vsimujjlhkupypy4d222po4yo7hz5il2dstifw4dpa"
+availability_domain    = "khHu:SA-SAOPAULO-1-AD-1"
+public_key_path        = "~/.ssh/server_public_key.pub"
