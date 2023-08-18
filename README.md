@@ -103,7 +103,7 @@ In this section you will use **Terraform** locally to create this architecture:
     terraform apply (if everything is OK, type `yes` and hit Enter)
     ```
 
-5. At this stage (and after about 40-50 minutes) your architecture should have been deployed successfully. You can proceed to check logs and test access to the web pages available in this laboratory. You can, then, proceed to the next section for configuring your **OCI Network Firewall** to a better understanding of how configure, troubleshoot and visualize your OCI Network Firewall resource.
+5. At this stage (and after about 40-50 minutes) your architecture should have been deployed successfully. As the route tables are created after the OCI Network Firewall, wait a couple of minutes to let the LBs correctly access its backends servers. After that you can proceed to check logs and test access to the web pages available in this laboratory. You can, then, proceed to the next section for configuring your **OCI Network Firewall** to a better understanding of how configure, troubleshoot and visualize your OCI Network Firewall resource.
 
 6. If you no longer require your infrastructure, you can run this command to destroy the resources:
 
